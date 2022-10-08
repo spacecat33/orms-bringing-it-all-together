@@ -1,9 +1,9 @@
 class Dog
     attr_accessor :id, :name, :breed
-  
+    
     def initialize(attributes)
-      attributes.each do |n,b|
-            instance_variable_set("@#{n}",b) unless b.nil?
+      attributes.each do |key,value|
+            instance_variable_set("@#{key}",value) unless value.nil?
       end
     end
   
